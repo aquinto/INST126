@@ -50,7 +50,7 @@ def main():
                 print("Bye bye")
          else:
              to_return = calculator(commandName)
-             print(to_return)
+             print("Answer is: " + str(to_return))
              print("\n")
     
 main()
