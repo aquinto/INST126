@@ -12,6 +12,18 @@ Please make sure to enter the name of your operation and not the number next to 
 or else it will not work. You could also quit the program by entering quit when asked for your operation
 
 
-For example: to select the operation addition, please type in "addition" when asked by the program 
-             after that, it will ask you to input to numbers, please make sure to put a space between the two numbers 
-             so the program can read them as two seperate numbers! 
+'''python 
+   for example addition operation will look like 
+   Enter operation name: 
+ 1. Addition
+ 2. Subtraction
+ 3. Multiplication
+ 4. Division
+ 5. Square Root
+ 6. Power 
+ Quit to exit the calculator
+ 
+ > input: addition
+ > Enter two numbers:2 2
+ > Answer is: 4
+ '''
