@@ -12,7 +12,7 @@ Please make sure to enter the name of your operation and not the number next to 
 or else it will not work. You could also quit the program by entering quit when asked for your operation
 
 
-'''python 
+```python 
    for example addition operation will look like 
    Enter operation name: 
  1. Addition
@@ -26,4 +26,4 @@ or else it will not work. You could also quit the program by entering quit when 
  > input: addition
  > Enter two numbers:2 2
  > Answer is: 4
- '''
+ ```
