@@ -24,18 +24,16 @@ def calculator(command):
         num1, num2 = input("Enter two numbers: ").split(" ")
         total = int(num1) / int(num2)
         to_return = total
-    elif command == "square root":
+    elif command == "square root" or command == "squareroot":
         num = input("Enter a number: ")
         total = int(num) * (1/2)
         to_return = total 
     elif command == "power":
         num, length = input("Enter the number and the power: ").split(" ")
         total = 1
-        final = 0
         for x in range(0, int(length)):
             total = total*int(num)
-        final = total
-        to_return = final
+        to_return = total
     return to_return
 
 
