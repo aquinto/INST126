@@ -10,8 +10,8 @@ remember that once you enter a letter, you can't enter it again
 
 
 ```python 
-   for example it will look like 
-  You have 10 lives left and you have used these letters: 
+for example it will look like 
+You have 10 lives left and you have used these letters: 
 Current word:  - - - -
 Guess a letter:
  > d 
