@@ -13,12 +13,11 @@ def getArrayOfLines(word):
     return txt
 
 def checkLetterBoolean(word, letters):
-    check = False 
-    for char in word:
-        if char in letters:
-            check = True
+    for i in range (0, len(word)):
+        if word[i] in letters[len(letters)-1]:
+            return True
             
-    return check 
+    return False 
 
 def checkLetter(word, letters):
     line = ""
@@ -67,31 +66,32 @@ def main():
     letters_guessed = ""
     letters = []
     check = False 
-    while(check != True):
+    while(total_lives > 0):
         print("You have " + str(total_lives) + " lives left and you have used these letters: " + letters_guessed)
         print("Current word: " + line_word)
         letter = input("Guess a letter: ").upper()
         if checkDuplicates(letters, letter) == False:
             letters.append(letter)
-        else:
-            letter = input("Guess another letter, you already guessed that letter: ").upper()
+        else: 
+            letter = input("Guess another letter, you guessed that already: ").upper()
+            letters.append(letter)
         letters_guessed = lettersToString(letters)
         if checkLetterBoolean(get_word, letters) == False:
             total_lives = total_lives - 1
-            if total_lives <= 0:
-                check = True 
-                print("No! You couldnt guess the word :( ")
-                print("The word you couldn't guess was: " + get_word)
-                print("Better luck next time!")
         else: 
             line_word = checkLetter(get_word, letters)
             
         if removeSpaces(line_word) == get_word:
-            check = True 
             print("Yay! You guessed the word!")
             print("Here is the word you guessed: "+ get_word)
             print("This was an encrypted message!")
             print("The decoded message says: " + decrypt(get_word))
+            break
         
+        
+    if total_lives == 0:
+                print("No! You couldnt guess the word :( ")
+                print("The word you couldn't guess was: " + get_word)
+                print("Better luck next time!")
 
 main()
