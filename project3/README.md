@@ -7,7 +7,7 @@
 The implementation of the project will vary on the certain task we have to complete using the log file. Overall when parsing the file
 to get the information regarding the user, you could possibly read through the file normally using .readlines(). Since there is 4 total data points, our first thought was to contain the information about a certain user in a dictionary that has a key that is a tuple that contains the user id and server they are associated to and the value would be another dictonary where its key would be the activity and the value is the date and time of the activity. 
 An example of what we mean: 
-` dict = {} 
+> ` dict = {} 
   dict[(user_id, server_name)] = {}
   dict[(user_id, server_name)]["activity"] = "date and time" 
 ` 
