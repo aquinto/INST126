@@ -1,5 +1,5 @@
 
-# Project 3 Hacker Vibes
+# Project 3: Hacker Vibes
 
 ### Group members: Alexander Quinto and Eric Chu
 
@@ -11,6 +11,8 @@ An example of what we mean:
   dict[(user_id, server_name)] = {}
   dict[(user_id, server_name)]["activity"] = "date and time" 
 ` 
+>
+
 We arent sure if this would be the correct idea to user the following date structure to contain the information but this the the original idea we had when reading through the problem. The implementation of each of the logs we have to create will be explained further below. 
 
 ## Suspicious Activities
