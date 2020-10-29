@@ -13,7 +13,7 @@ An example of what we mean:
   dict[(user_id, server_name)] = {}
   dict[(user_id, server_name)]["activity"] = "date and time" 
  ``` 
-We arent sure if this would be the correct idea to user the following date structure to contain the information but this the the original idea we had when reading through the problem. The implementation of each of the logs we have to create will be explained further below. 
+We arent sure if this would be the correct idea to use the following data structure to contain the information but this the the original idea we had when reading through the problem. The implementation of each of the logs we have to create will be explained further below. 
 
 ## Suspicious Activities
 This problem would require us to keep track of the amount of times the user logs in per day and the date/time of each login, 
