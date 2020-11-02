@@ -38,7 +38,7 @@ This problem would just require us to go through our data structure and create a
 
 The following problem could be solved in essentially one function although it might be a long one, it can also be split up into various amount to make the code more readable. 
 
-### **Week 2 Updates** 
+# **Week 2 Updates** 
 
 ### Parsing the file 
 From the original idea that we had for the database, we had come up with the following idea: 
