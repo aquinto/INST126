@@ -54,6 +54,7 @@ From the original idea that we had for the database, we had come up with the fol
   tuple = (server, activity, date and time)
   dict[user] = tuple
  ``` 
+ It is still important to understand that the data structure we use can change as we continue to implement our solution to our project. 
  
 ## Domain Count 
 Using the database structure we defined above this problem wasn't that difficult, it was basically involved us going through our database and splitting the username at the character @ to create a new dictionary that contained the domain as the key and the value would be the number of users attached to that username. 
