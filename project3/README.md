@@ -118,3 +118,8 @@ We then check if the number of logins is greater than 5 and if we had a suspicio
 This problem's implementation description has not changed from week 2, using the database structure we defined above this problem wasn't that difficult, it was basically involved us going through our database and splitting the username at the character @ to create a new dictionary that contained the domain as the key and the value would be the number of users attached to that username. 
 
 It involved a simple iteration through our database and just using String built in functions that allowed us to obtain the correct count for the information that we needed to get and storing it inside a new dictionary that had a key which was the domain name and the value was the number of people who used that domain. We then iterated through that database and wrote to our file to create our report. 
+
+### Errors
+to do 
+### Changes in Flowcharts
+to do
