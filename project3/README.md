@@ -110,9 +110,21 @@ We then check if the number of logins is greater than 5 and if we had a suspicio
  Once we create this database then we use it to create our report for suspicious activities. We iterate through and write to our file our total amount of cases of suspicious activity. We then for each user write the user and their number of cases. We use our original database to get our time, server and activty to write to our file. 
  
  ### Irresponsible Behavior
- to do
+  We have modified our data structure so per email and per date we have an integer representing the total number of login/logouts. For every login, we add the integer with a 1 & for every logout we decrement by a value of 1. The singular number will either represent if there has been more logins that logouts (positive number) or more logouts than logins (negative number). This is also the same data structure for system glitch. 
+  
+ ```python  
+  dict = {} 
+  dict[user] = {}
+  dict[user][date] = 3 # Could be a negative number
+ ``` 
+ 
+ Then we use this information to put name & dates in which logins > logouts (positive numbers) into a new hash. Finally we grab the time, date, server information per dates & write that all into the file.  
+  
  ### System Glitch 
- to do
+ We use the data structure described above. 
+
+ Then we use this information to put name & dates in which logins < logouts (negative numbers) into a new hash. Finally we grab the time, date, server information per dates & write that all into the file. 
+ 
  
  ### Domain Count
 This problem's implementation description has not changed from week 2, using the database structure we defined above this problem wasn't that difficult, it was basically involved us going through our database and splitting the username at the character @ to create a new dictionary that contained the domain as the key and the value would be the number of users attached to that username. 
@@ -132,7 +144,10 @@ Error in making general database. In our original propose we had a database that
 To solve this, we keep the dictionary structure however added a nested dictionary that would contain a date key and the value would be a list of a list that contained the rest of the information. The list of list allows us to add more information if we encountered that user and date again when parsing through the rest of the file. 
 
 #### 3
-to do
+Error in making my hash for system glitch + irresponsible behavior. I had thrown in a key of a string -> int into a dictionary of string -> arrays. The string was total "n_cases" -> n_cases (the actual number of cases for that behaviour). So when I trying to get the length of the hash/dictionary using len(), it threw me a typeError saying that I can't get the length of an int.
+
+To solve this I simply took out the string -> integer key-value pair. I held the variable elsewhere and used it when writing my file. 
+
 ### Changes in Flowcharts
 #### Parse File 
  The changes in the parse file flowchart weren't significant changes, the only thing that change was the structure of the database we used. 
