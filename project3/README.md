@@ -72,3 +72,49 @@ These two problem sets involved more of a thought process than domain count, our
  
 ## Suspicious Activities
 This problem is very similar to system glitch and irresponsible behavior with the difference of time being a factor. This is the problem we haven't fully tackled yet but we have a general idea as to how to approach it. We could follow the similar structure we did in irresponsible behavior and system glitch but account for the time criteria that is require for the activity to be considered suspicious. 
+
+
+# **Week 3 Updates** 
+
+### Parsing the file 
+From the original idea that we had for the database, we had come up with the following idea for week 1: 
+```python  
+  dict = {} 
+  dict[(user_id, server_name)] = {}
+  dict[(user_id, server_name)]["activity"] = "date and time" 
+ ``` 
+ However, after some thought we decided that it would be better if we had a dictionary of tuples. 
+ Where the key would represent the user and the value for each key would be a tuple of the server, activity and date/time for week 2 
+ ```python  
+  dict = {} 
+  tuple = (server, activity, date and time)
+  dict[user] = tuple
+ ``` 
+As we started to implement the project we found that our database wasn't ideal for getting the correct information that we wanted from the database in order to complete the tasks. The following database is what we settled on to implement the project:
+```python  
+  dict = {} 
+  dict[user] = {}
+  dict[user][date] = [[time, activity,server]]
+ ``` 
+ The reasoning behind this database is that we want to have a dictionary of dictionary where the key was the user that points to a date and then contains a list of lists that contain the time, activity and server names. If we encountered a user and date we entered into our database then we add the time, activity, and server name to our list as a list. Our original database design didn't account for duplicates due to the way we had implemented it and didn't contain all the information from the data file we parse.
+ 
+ ### Suspicious Activities
+ This problem was made much more doable given our new database, before we begin tackling the problem we have to sort our database given the time so once we write to a file we are able to have our times in accending order. In the method we will create a new database that will allow us to have the number of suspicious activity per user and the dates that the activity occurred. We iterate through the users and dates of our database, we then count the number of logins for that user and their number of activities that were between 12 AM and 5 AM by using .split(":") and converting it to an int and checking if it is between 0 and 5. We also use a counter to keep track of the total amount of suspicious activities. 
+ 
+We then check if the number of logins is greater than 5 and if we had a suspicious login given the time constraints. If we do then we add that user to our suspicious database, which looks like: 
+```python  
+  sus = {} 
+  sus[user] = []
+  sus[user] = [count of sus activity for that user, [dates]]
+ ``` 
+ Once we create this database then we use it to create our report for suspicious activities. We iterate through and write to our file our total amount of cases of suspicious activity. We then for each user write the user and their number of cases. We use our original database to get our time, server and activty to write to our file. 
+ 
+ ### Irresponsible Behavior
+ to do
+ ### System Glitch 
+ to do
+ 
+ ### Domain Count
+This problem's implementation description has not changed from week 2, using the database structure we defined above this problem wasn't that difficult, it was basically involved us going through our database and splitting the username at the character @ to create a new dictionary that contained the domain as the key and the value would be the number of users attached to that username. 
+
+It involved a simple iteration through our database and just using String built in functions that allowed us to obtain the correct count for the information that we needed to get and storing it inside a new dictionary that had a key which was the domain name and the value was the number of people who used that domain. We then iterated through that database and wrote to our file to create our report. 
