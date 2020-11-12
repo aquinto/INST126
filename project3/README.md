@@ -120,6 +120,27 @@ This problem's implementation description has not changed from week 2, using the
 It involved a simple iteration through our database and just using String built in functions that allowed us to obtain the correct count for the information that we needed to get and storing it inside a new dictionary that had a key which was the domain name and the value was the number of people who used that domain. We then iterated through that database and wrote to our file to create our report. 
 
 ### Errors
-to do 
+#### 1 
+Error in making a seperate database for suspicious activity method. Originally I had decided to use a dictionary with a value that would be a tupe that contained the total count of suspicious activity for that given user and a list of dates that those activities occurred. 
+
+I was receiving the "TypeError: 'tuple' object does not support item assignment" error when trying to make my database. This was I had forgotten that tuples are not mutable therefore I could not change the tuple at assignment. 
+
+To solve the issue I instead decided to use a list instead of a tuple as lists are mutable.
+#### 2
+Error in making general database. In our original propose we had a database that was a dictionary where the key was the user and the value was the rest of the infromation from the file. This would be a correct implementation if the file did not contain duplicates for user and dates. This implementation would have not made the information available to parse our file in the rest of the methods. 
+
+To solve this, we keep the dictionary structure however added a nested dictionary that would contain a date key and the value would be a list of a list that contained the rest of the information. The list of list allows us to add more information if we encountered that user and date again when parsing through the rest of the file. 
+
+#### 3
+
 ### Changes in Flowcharts
-to do
+#### Parse File 
+ The changes in the parse file flowchart weren't significant changes, the only thing that change was the structure of the database we used. 
+#### Suspicious Activity 
+    The changes in the suspicious report flowchart just revolved around the begininng logic where in the week 2 flowchart we parsed the file directly in the suspicious activity method. The new flowchart just calls the sortedTime(createDatabase()) which returns the database with the time sorted in accending order. The rest of the logic behind both week 2 and week 3 flowcharts stays the same, week 3 goes into more detail of the implementation. 
+#### Irresponsible Behavior
+ to do
+#### System Glitch 
+ to do
+#### Domain Count
+   The changes in the week 2 and week 3 flowchart for domain count weren't significant as well. The logic presented in the week 2 flowchart is apart of our final week 3 flowchart, however, our week 3 flowchart goes into more detail and shows the implementation of the file writing and creating the report.  
