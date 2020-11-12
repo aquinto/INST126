@@ -132,7 +132,7 @@ Error in making general database. In our original propose we had a database that
 To solve this, we keep the dictionary structure however added a nested dictionary that would contain a date key and the value would be a list of a list that contained the rest of the information. The list of list allows us to add more information if we encountered that user and date again when parsing through the rest of the file. 
 
 #### 3
-
+to do
 ### Changes in Flowcharts
 #### Parse File 
  The changes in the parse file flowchart weren't significant changes, the only thing that change was the structure of the database we used. 
