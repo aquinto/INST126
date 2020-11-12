@@ -137,7 +137,7 @@ to do
 #### Parse File 
  The changes in the parse file flowchart weren't significant changes, the only thing that change was the structure of the database we used. 
 #### Suspicious Activity 
-    The changes in the suspicious report flowchart just revolved around the begininng logic where in the week 2 flowchart we parsed the file directly in the suspicious activity method. The new flowchart just calls the sortedTime(createDatabase()) which returns the database with the time sorted in accending order. The rest of the logic behind both week 2 and week 3 flowcharts stays the same, week 3 goes into more detail of the implementation. 
+ The changes in the suspicious report flowchart just revolved around the begininng logic where in the week 2 flowchart we parsed the file directly in the suspicious activity method. The new flowchart just calls the sortedTime(createDatabase()) which returns the database with the time sorted in accending order. The rest of the logic behind both week 2 and week 3 flowcharts stays the same, week 3 goes into more detail of the implementation. 
 #### Irresponsible Behavior
  to do
 #### System Glitch 
