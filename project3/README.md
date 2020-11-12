@@ -154,8 +154,8 @@ To solve this I simply took out the string -> integer key-value pair. I held the
 #### Suspicious Activity 
  The changes in the suspicious report flowchart just revolved around the begininng logic where in the week 2 flowchart we parsed the file directly in the suspicious activity method. The new flowchart just calls the sortedTime(createDatabase()) which returns the database with the time sorted in accending order. The rest of the logic behind both week 2 and week 3 flowcharts stays the same, week 3 goes into more detail of the implementation. 
 #### Irresponsible Behavior
- to do
+  Not any significant changes except the helper function was replaced was the database I used to obtain time, server, activity information per selected date. 
 #### System Glitch 
- to do
+  Not any significant changes except the helper function was replaced was the database I used to obtain time, server, activity information per selected date. Mostly because the data structure of having an integer denoting more login/logouts was retained. Again the only change was the helper function used to obtain the time, server, activity information. 
 #### Domain Count
    The changes in the week 2 and week 3 flowchart for domain count weren't significant as well. The logic presented in the week 2 flowchart is apart of our final week 3 flowchart, however, our week 3 flowchart goes into more detail and shows the implementation of the file writing and creating the report.  
