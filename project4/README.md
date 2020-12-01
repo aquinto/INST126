@@ -54,9 +54,29 @@ the title of the article and the value is a list that contains the description o
 and the url to the feature image of the article 
 
 ### createHeadEmail 
+This method creates the head of the email html essentially. We pass in the user's choice, keyword and country. 
+We are then able to use the user's choice to determine if they selected top headlines or get articles. 
+We then create a string that will be the h1 of the email and return it at the end of the method. 
 
 ### createHTML
+This method creates what will go inside of the body tag of the email html. Through the use of multi line string we are able 
+to construct the html code that makes use of media object for the body of the email. We use custom css class from Bootstrap to provide some css to our html 
+code than it just being plain html in our email with no styling. 
+
+We have the database parameter which we use to gather the information such as the title, description and url to the article
+we then construct the html and using a clickable link on the title that would re direct the user to the webpage of that given article.
+Iterating through our database we are able to get the data from the article to create our html code. 
 
 ### sendEmail
+This method allows us to send emails to the user with the information they selected inside the main() method. 
+It takes in the html_body, email, country, keyword and choice as parameters, through the use of the MIMEMultipart python library
+we are able to construct a message which contains a subject, from, and to fields. 
+
+Using multi line strings we then construct a general html file which will be embedded within our email to display our data to
+our user. Once we construct the html code for our email, we use the smtplib library to be able to send the email to the user 
+through a gmail server that uses a personalized account. 
 
 ### main
+This method handles the general code of what the user interact with. 
+We ask the user for their input in which we then call the functions necessary that will handle the main portions 
+of our project
