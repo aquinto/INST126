@@ -83,4 +83,4 @@ of our project
 
 # Final Updates 
 
-## There are no updates to the descriptions above 
+## There are no updates to the descriptions done in Update 2
