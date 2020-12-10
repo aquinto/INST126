@@ -80,3 +80,7 @@ through a gmail server that uses a personalized account.
 This method handles the general code of what the user interact with. 
 We ask the user for their input in which we then call the functions necessary that will handle the main portions 
 of our project
+
+# Final Updates 
+
+## There are no updates to the descriptions above 
